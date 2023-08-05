@@ -1,0 +1,7 @@
+syntax = "proto3";
+
+message fighter {
+  string name = 1;
+  string style = 2;
+  int32 age = 3;
+}
