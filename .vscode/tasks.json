@@ -1,0 +1,49 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+      {
+        "label": "configure",
+        "type": "shell",
+        "command": "conan",
+        "args": [
+          "install",
+          "${workspaceFolder}",
+          "--build=missing"
+        ],
+        "group": "build",
+        "presentation": {
+          "reveal": "silent"
+        }
+      },
+      {
+        "label": "build",
+        "type": "shell",
+        "command": "cmake",
+        "args": [
+          "--build",
+          "${workspaceFolder}/build"
+        ],
+        "group": "build",
+        "presentation": {
+          "reveal": "always",
+          "panel": "shared"
+        }
+      },
+      {
+        "label": "clean",
+        "type": "shell",
+        "command": "cmake",
+        "args": [
+          "--build",
+          "${workspaceFolder}/build",
+          "--target",
+          "clean"
+        ],
+        "group": "build",
+        "presentation": {
+          "reveal": "always",
+          "panel": "shared"
+        }
+      }
+    ]
+  }
